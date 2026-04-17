@@ -6,6 +6,8 @@
 
 # screenshot-x402-cli
 
+[![CI](https://img.shields.io/github/actions/workflow/status/AkaCoder404/screenshot-x402-cli/ci.yml?branch=main&label=tests)](https://github.com/AkaCoder404/screenshot-x402-cli/actions/workflows/ci.yml)
+
 **[screenshot-x402](https://screenshotx402.com/)** is the product: pay-per-request **screenshots (and optional vision) for AI agents**, with real browser rendering, **MCP over Streamable HTTP**, and **[x402](https://www.x402.org/)** settlement in USDC—no caller API keys. The marketing site, discovery JSON, docs, and pricing all live there.
 
 This repo is the **official Node.js CLI** for that service: it connects to the same MCP endpoint agents use, calls `health` (free) or paid tools (`take_screenshot`, `analyze_screenshot`) with `withX402Client` and **viem**, and writes **PNG/JPEG**, **JSON**, and an **HTML** report under your chosen output directory.
@@ -69,22 +71,22 @@ screenshot-x402 analyze --page https://example.com
 
 **Common to `screenshot` and `analyze`**
 
-| Flag                          | Description                                         |
-| ----------------------------- | --------------------------------------------------- |
-| `--width <px>`                | Viewport width (default: `1280`)                    |
-| `--height <px>`               | Viewport height (default: `720`)                    |
-| `--full-page`                 | Capture the full scrollable page                    |
+| Flag                           | Description                                         |
+| ------------------------------ | --------------------------------------------------- |
+| `--width <px>`                 | Viewport width (default: `1280`)                    |
+| `--height <px>`                | Viewport height (default: `720`)                    |
+| `--full-page`                  | Capture the full scrollable page                    |
 | `--color-scheme <light\|dark>` | Color scheme                                        |
-| `--device-scale-factor <1-3>` | Pixel ratio / sharpness (default: `1`)              |
-| `--hide <selector>`           | Repeat for each CSS selector to hide before capture |
+| `--device-scale-factor <1-3>`  | Pixel ratio / sharpness (default: `1`)              |
+| `--hide <selector>`            | Repeat for each CSS selector to hide before capture |
 
 **`screenshot` only**
 
-| Flag                | Description                                         |
-| ------------------- | --------------------------------------------------- |
-| `--format <png\|jpeg>`         | Output format                                       |
-| `--delay <ms>`      | Extra wait after load (default: `0`)                |
-| `--cache-ttl <sec>` | Cache TTL; `0` skips cache reads (default: `86400`) |
+| Flag                   | Description                                         |
+| ---------------------- | --------------------------------------------------- |
+| `--format <png\|jpeg>` | Output format                                       |
+| `--delay <ms>`         | Extra wait after load (default: `0`)                |
+| `--cache-ttl <sec>`    | Cache TTL; `0` skips cache reads (default: `86400`) |
 
 **`analyze` only**
 
