@@ -4,6 +4,8 @@
 
 # screenshot-x402-cli
 
+[![CI](https://github.com/build-in-hk/screenshot-x402-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/build-in-hk/screenshot-x402-mcp/actions/workflows/ci.yml)
+
 **[screenshot-x402](https://screenshotx402.com/)** is the product: pay-per-request **screenshots (and optional vision) for AI agents**, with real browser rendering, **MCP over Streamable HTTP**, and **[x402](https://www.x402.org/)** settlement in USDC—no caller API keys. The marketing site, discovery JSON, docs, and pricing all live there.
 
 This repo is the **official Node.js CLI** for that service: it connects to the same MCP endpoint agents use, calls `health` (free) or paid tools (`take_screenshot`, `analyze_screenshot`) with `withX402Client` and **viem**, and writes **PNG/JPEG**, **JSON**, and an **HTML** report under your chosen output directory.
